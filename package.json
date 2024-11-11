@@ -1,0 +1,15 @@
+{
+  "name": "AppBudget",
+  "version": "1.0.0",
+  "description": "Budget Management Application Developed with Electron.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Kawtar ES-SEBBANI",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.2.0"
+  }
+}
