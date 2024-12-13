@@ -11,13 +11,17 @@ function createWindow()
         minHeight : 640,
         closable : true,
         darkTheme : true,
-        frame : false,
-        icon : path.join(__dirname,'./ico.ico'),
+        frame : true,
+        icon : path.join(__dirname,'./icons/ico.ico'),
         webPreferences : {
+            nodeIntegration : false,
+            contextIsolation : false,// si je veux que mon application sera connecter à internet je tourne sa valeur à true
+            devTools : true,// pour nous permet d'afficher la console developpeur comme nous retouve sous chrome
             preload : path.join(__dirname,"preload.js")
         }
     })
     win.loadFile("index.html");
+    win.webContents.openDevTools();//afficher la console developpeur 
 }
 //quand electron est prèt  !
 app.whenReady().then(() => {
